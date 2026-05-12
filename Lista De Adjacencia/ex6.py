@@ -10,7 +10,7 @@ def removeArestaLista(listaAdj, vi, vj):
     else:
         listaAdj[vi].remove(vj)
         listaAdj[vj].remove(vi)
-    prin
+    print(listaAdj)
 
 
 
