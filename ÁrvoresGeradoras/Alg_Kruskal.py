@@ -14,7 +14,7 @@ def kruskal(grafo):
     for i in Pesos:
         H.append((i[1], i[2]))
 
-    # Função para verificar se dois vértices estão conectados
+    # Função para verificar se dois vértices estão conectados (formam ciclo)
     def estao_conectados(T, u, v):
         adj = {i: [] for i in range(len(grafo))}
         for edge in T:
