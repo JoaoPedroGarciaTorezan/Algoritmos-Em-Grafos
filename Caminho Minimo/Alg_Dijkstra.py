@@ -26,6 +26,7 @@ def dijkstra(grafo, inicio, fim):
             if custo[i] < min_custo and i in list_A:
                 min_custo = custo[i]
                 v = i
+                
         list_F.append(v)
         list_A.remove(v)
         #adjacentes de v
