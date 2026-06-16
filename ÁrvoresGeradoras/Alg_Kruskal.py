@@ -1,6 +1,5 @@
 def kruskal(grafo):
     Pesos = []
-    V = list(range(len(grafo)))
     H = []
     T = []
     custo_total = 0
@@ -11,8 +10,8 @@ def kruskal(grafo):
 
 
     Pesos.sort()
-    for i in Pesos:
-        H.append((i[1], i[2]))
+    for (p,u,v) in Pesos:
+        H.append((u, v))
 
     # Função para verificar se dois vértices estão conectados (formam ciclo)
     def estao_conectados(T, u, v):

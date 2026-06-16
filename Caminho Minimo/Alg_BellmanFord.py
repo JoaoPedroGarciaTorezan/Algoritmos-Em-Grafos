@@ -14,14 +14,14 @@ def bellmanford(grafo, inicio, fim):
     
     custo[inicio] = 0
     for i in range(len(grafo)):
-        for j in E:
-            if custo[j[1]] > custo[j[0]] + grafo[j[0]][j[1]]:
-                custo[j[1]] = custo[j[0]] + grafo[j[0]][j[1]] 
-                rota[j[1]] = j[0]
+        for (v, u) in E:
+            if custo[u] > custo[v] + grafo[v][u]:
+                custo[u] = custo[v] + grafo[v][u] 
+                rota[u] = v
 
     # Verifica se o grafo forma um ciclo de peso negativo
     for i in E:
-        if custo[j[1]] > custo[j[0]] + grafo[j[0]][j[1]]:
+        if custo[u] > custo[v] + grafo[v][u]:
             return False
     # Monta o caminho (igual ao Dijkstra)
     caminho = []

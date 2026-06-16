@@ -7,7 +7,6 @@ def dijkstra(grafo, inicio, fim):
     rota = []
     list_A = []
     list_F = []
-    list_N = []
 
     #Inicialização
     for i in range(len(grafo)):
@@ -23,7 +22,7 @@ def dijkstra(grafo, inicio, fim):
         min_custo = INF
         v = 0
         for i in list_A:
-            if custo[i] < min_custo and i in list_A:
+            if custo[i] < min_custo:
                 min_custo = custo[i]
                 v = i
                 
