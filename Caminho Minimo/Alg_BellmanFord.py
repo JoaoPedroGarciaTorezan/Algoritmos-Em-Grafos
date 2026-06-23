@@ -20,7 +20,7 @@ def bellmanford(grafo, inicio, fim):
                 rota[u] = v
 
     # Verifica se o grafo forma um ciclo de peso negativo
-    for i in E:
+    for (v, u) in E:
         if custo[u] > custo[v] + grafo[v][u]:
             return False
     # Monta o caminho (igual ao Dijkstra)

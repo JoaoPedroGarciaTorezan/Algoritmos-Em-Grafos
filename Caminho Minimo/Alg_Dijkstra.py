@@ -10,9 +10,7 @@ def dijkstra(grafo, inicio, fim):
 
     #Inicialização
     for i in range(len(grafo)):
-        if grafo[inicio][i] != 0:
-            custo.append(grafo[inicio][i])
-        else: custo.append(INF)
+        custo.append(INF)
         rota.append(inicio)
         list_A.append(i)
 

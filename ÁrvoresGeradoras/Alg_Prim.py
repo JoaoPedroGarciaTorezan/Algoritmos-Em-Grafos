@@ -16,12 +16,11 @@ def prim(grafo):
                     u = j
         S.append(u)
         N.remove(u)
+        custo_total += E_min
         T.append((w, u))
         E_min = 0x3F3F3F3F3F
-    for i in T:
-        custo_total += grafo[i[0]][i[1]]
     print(T, custo_total)
 
-   
+
 grafo = [[0,3,8,4,0,10],[3,0,0,6,0,0],[8,0,0,0,7,0],[4,6,0,0,1,3],[0,0,7,1,0,1],[10,0,0,3,1,0]]
 prim(grafo)
